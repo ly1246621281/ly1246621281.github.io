@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>留言 | Hexo</title>
+    <title>`Mysql`分类下的文章 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
     <meta name="description" content="ZK个人小站" >
@@ -60,19 +60,19 @@ var _hmt = _hmt || [];
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/comment/index.html" class="item ">
+            <li rel="/categories/Mysql/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/comment/index.html" class="item ">
+            <li rel="/categories/Mysql/index.html" class="item ">
                 <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
             </li>
             
-            <li rel="/comment/index.html" class="item ">
+            <li rel="/categories/Mysql/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/comment/index.html" class="item current">
+            <li rel="/categories/Mysql/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -119,108 +119,80 @@ var _hmt = _hmt || [];
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 独立页面 -->
-<article class="post article">
-    <header class="text-center">
-        <h4 class="post-title"><a href="javascript: void(0);">留言</a></h4>
+                <!-- 文章分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `Mysql`分类下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Mysql/">Mysql</a>
+        
+        <!-- 文章标题 -->
+        
     </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2020-12-06T09:58:13.279Z">2020-12-06</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
     <div class="post-content">
-        
-            <!-- 自定义留言页 -->
+        <div class="post-excerpt">
+            
+                <h1 id="MYSQL-总结"><a href="#MYSQL-总结" class="headerlink" title="MYSQL 总结"></a>MYSQL 总结</h1><h2 id="1-tip"><a href="#1-tip" class="headerlink" title="1. tip"></a>1. tip</h2><ul>
+<li>mysql建表不能重复列名，表关联或者起别名可以重复列名，即 <code>a.*,b.*（包括a.activityId,b.activityId）</code>是可以的。</li>
+<li></li>
+</ul>
+<h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h2><ol>
+<li> mybatis 分页加序号</li>
+</ol>
+<blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> (@mycnt := <span class="keyword">cast</span>(@mycnt <span class="keyword">as</span> SIGNED)+<span class="number">1</span>) <span class="keyword">as</span> <span class="keyword">rownum</span>,</span><br><span class="line">     b.* </span><br><span class="line"><span class="keyword">from</span>(</span><br><span class="line">	<span class="keyword">select</span> * <span class="keyword">from</span> xx</span><br><span class="line">  <span class="keyword">limit</span> <span class="comment">#&#123;pageInfo.startRow&#125;, #&#123;pageInfo.pageSize&#125;</span></span><br><span class="line"> )b , (<span class="keyword">select</span> @mycnt := <span class="comment">#&#123;pageInfo.startRow&#125;)  num</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ol start="2">
+<li><p>时间sql</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- between and</span></span><br><span class="line">activity_dt between date(&#x27;2020-09-01 00:00:00.0&#x27;) and date(&#x27;2020-09-29 00:00:00.0&#x27;) and activity_dt between date(start_time) and date_add(end_time, interval 60 day)</span><br><span class="line"><span class="comment">-- 格式化</span></span><br><span class="line">date_format(activity_dt, &#x27;%Y-%m-%d&#x27;) startActivityDt </span><br><span class="line"><span class="comment">-- 按周统计，当前日期所在周的周一</span></span><br><span class="line">DATE_FORMAT(STR_TO_DATE(CONCAT(YEAR(activity_dt),weekofyear(activity_dt )-1,&#x27;Monday&#x27;) , &#x27;%X %V %W %u&#x27;), &#x27;%Y-%m-%d&#x27;) as startActivityDt</span><br><span class="line">DATE_FORMAT(STR_TO_DATE(CONCAT(YEAR(activity_dt),weekofyear(activity_dt ),&#x27;Sunday&#x27;) , &#x27;%X %V %W %u&#x27;), &#x27;%Y-%m-%d&#x27;) as endActivityDt ,</span><br><span class="line">        </span><br><span class="line"><span class="comment">-- 按月统计，月初以及月末日期</span></span><br><span class="line"> DATE_ADD(activity_dt,interval -day(activity_dt)+1 day) as startActivityDt,</span><br><span class="line"> last_day(activity_dt) as endActivityDt ,</span><br><span class="line"><span class="comment">-- 按季统计</span></span><br><span class="line"> <span class="comment">-- 当前quarter的第一天：</span></span><br><span class="line">concat(date_format(LAST_DAY(MAKEDATE(EXTRACT(YEAR FROM  activity_dt),1) + interval QUARTER(activity_dt)*3-3 month),&#x27;%Y-%m-&#x27;),&#x27;01&#x27;) as startActivityDt,</span><br><span class="line"> <span class="comment">-- 当前quarter的最后一天：</span></span><br><span class="line">LAST_DAY(MAKEDATE(EXTRACT(YEAR  FROM activity_dt),1) + interval QUARTER(activity_dt)*3-1 month)as endActivityDt,</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
 
-<p class="text-center">
- 放个图片？
-</p>
-
-<p class="text-center">
-  如果觉得博客对您有用，欢迎微信赞赏
-</p>
-
-  
-  
-<script src="/js/comment.js"></script>
-
-  <div id="comments" class="comment">
-    <!--
-    <div class="sign-bar">
-      GitHub 已登录!
-      <span class="sign-link">登出</span>
-    </div>
-    <section class="box">
-      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
-      <div class="com-text">
-        <div class="main">
-          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
-          <div class="text-area-preview"></div>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2020/12/06/Mysql/MYSQL%20%E6%80%BB%E7%BB%93/">阅读剩下更多</a>
+            </p>
         </div>
-        <div class="switch">
-          <div class="switch-item on">编辑</div>
-          <div class="switch-item">预览</div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2020/12/06/Mysql/MYSQL%20%E6%80%BB%E7%BB%93/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图" >
+                
+            </a>
         </div>
-        <div class="button">提交</div>
-      </div>
-    </section>
-    <section class="tips">注：评论支持 markdown 语法！</section>
-    <section class="list-wrap">
-      <ul class="list">
-        <li>
-          <div class="user-avatar">
-            <a href="/">
-              <img src="/img/jelon.jpg" alt="user-avatar">
-            </a>
-          </div>
-          <div class="user-comment">
-            <div class="user-comment-header">
-              <span class="post-name">张德龙</span>
-              <span class="post-time">2017年12月12日</span>
-              <span class="like liked">已赞</span>
-              <span class="like-num">2</span>
-            </div>
-            <div class="user-comment-body">333333</div>
-          </div>
-        </li>
-        <li>
-          <div class="user-avatar">
-            <a href="/">
-              <img src="/img/jelon.jpg" alt="user-avatar">
-            </a>
-          </div>
-          <div class="user-comment">
-            <div class="user-comment-header">
-              <span class="post-name">刘德华</span>
-              <span class="post-time">2017年12月12日</span>
-              <span class="like">点赞</span>
-              <span class="like-num">2</span>
-            </div>
-            <div class="user-comment-body">vvvvv</div>
-          </div>
-        </li>
-      </ul>
-      <div class="page-nav">
-        <a href="javascript: void(0);" class="item">1</a>
-        <a href="javascript: void(0);" class="item">2</a>
-        <a href="javascript: void(0);" class="item current">3</a>
-      </div>
-    </section>
-    -->
-  </div>
-  <script>
-  JELON.Comment({
-    container: 'comments',
-    label: '' || 'comment/index.html',
-    owner: 'ly1246621281',
-    repo: 'blog_comments',
-    clientId: 'b08ed25e52c57993e69c',
-    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
-  });
-  </script>
-
-
-
-
-        
     </div>
 </article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
             </div>
 
         </section>
@@ -325,7 +297,7 @@ var _hmt = _hmt || [];
     <!--博客js脚本 -->
     <!-- 这里放网站js脚本 -->
 
-<script src="/js/main.js?v=1607249482832.js"></script>
+<script src="/js/main.js?v=1607249482841.js"></script>
 
 </body>
 </html>
