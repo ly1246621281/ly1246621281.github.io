@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>Comparator学习 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Comparator%E5%AD%A6%E4%B9%A0/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Comparator%E5%AD%A6%E4%B9%A0/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Comparator%E5%AD%A6%E4%B9%A0/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Comparator%E5%AD%A6%E4%B9%A0/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>Comparator学习</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="1970-01-01T05:36:41.207Z">1970-01-01</time>
+    </p>
+    <div class="post-content">
+        <h1 id="Comparator学习"><a href="#Comparator学习" class="headerlink" title="Comparator学习"></a>Comparator学习</h1><p>​    1. 排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list = Lists.newArrayList(<span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">10</span>);</span><br><span class="line">List&lt;Integer&gt; collect1 = list.stream().sorted(Comparator.nullsFirst((a, b) -&gt; a - b &gt; <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>)).</span><br><span class="line">               collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+
+<p>排序 整体按照</p>
+<p>(a,b) -&gt; a&gt;b  1  a&lt;b -1  a=b  0</p>
+<p>a&gt;b  1 降序排，-1升序排.必须 1和-1同时存在，不然比较器不知反正怎么排序。上述案例未排序.</p>
+<ol start="2">
+<li>以5为中线，左右两半各进行相应排序</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List collect = list.stream().sorted(Comparator.&lt;Integer&gt;comparingInt(p -&gt; p &gt;= <span class="number">5</span> ? -<span class="number">1</span> : <span class="number">1</span>).</span><br><span class="line">               thenComparing((a, b) -&gt; a == b ? <span class="number">0</span> : (a - b &gt; <span class="number">0</span> ? <span class="number">1</span> : -<span class="number">1</span>)))</span><br><span class="line">               .collect(Collectors.toList());</span><br><span class="line"> System.out.println(collect);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sorted(Comparator.&lt;Integer&gt;comparingInt(p -&gt; p &#x3D;&#x3D; 5 ? 0 : -1)</span><br><span class="line">5在後面，</span><br><span class="line">sorted(Comparator.&lt;Integer&gt;comparingInt(p -&gt; p &#x3D;&#x3D; 5 ? 0 : 1)</span><br><span class="line">5在前面</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>3.comparing 方法一</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">sort 对象接收一个 Comparator 函数式接口，可以传入一个lambda表达式</span><br><span class="line">        */</span><br><span class="line">       employees.sort((o1, o2) -&gt; o1.getName().compareTo(o2.getName()));</span><br><span class="line"></span><br><span class="line">       Collections.sort(employees, (o1, o2) -&gt; o1.getName().compareTo(o2.getName()));</span><br><span class="line"></span><br><span class="line">       employees.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * Comparator.comparing 方法的使用</span></span><br><span class="line"><span class="comment">        *</span></span><br><span class="line"><span class="comment">        * comparing 方法接收一个 Function 函数式接口 ，通过一个 lambda 表达式传入</span></span><br><span class="line"><span class="comment">        *</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">       employees.sort(Comparator.comparing(e -&gt; e.getName()));</span><br><span class="line"></span><br><span class="line">       <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * 该方法引用 Employee::getName 可以代替 lambda表达式</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">       employees.sort(Comparator.comparing(Employee::getName));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>4.comparing 方法二</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static &lt;T, U&gt; Comparator&lt;T&gt; comparing(</span><br><span class="line">        Function&lt;? super T, ? extends U&gt; keyExtractor,</span><br><span class="line">        Comparator&lt;? super U&gt; keyComparator)</span><br><span class="line">&#123;</span><br><span class="line">    Objects.requireNonNull(keyExtractor);</span><br><span class="line">    Objects.requireNonNull(keyComparator);</span><br><span class="line">    return (Comparator&lt;T&gt; &amp; Serializable)</span><br><span class="line">        (c1, c2) -&gt; keyComparator.compare(keyExtractor.apply(c1),</span><br><span class="line">                                          keyExtractor.apply(c2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>和comparing 方法一不同的是 该方法多了一个参数 keyComparator ，keyComparator 是创建一个自定义的比较器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(employees, Comparator.comparing(</span><br><span class="line">                Employee::getName, (s1, s2) -&gt; &#123;</span><br><span class="line">                    return s2.compareTo(s1);</span><br><span class="line">                &#125;));</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用-Comparator-reversed-进行排序"><a href="#使用-Comparator-reversed-进行排序" class="headerlink" title="使用 Comparator.reversed\ 进行排序"></a>使用 <strong><em>Comparator.reversed\</em></strong> 进行排序</h1><p>返回相反的排序规则，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> *  相反的排序规则</span><br><span class="line"> *&#x2F;</span><br><span class="line">Collections.sort(employees, Comparator.comparing(Employee::getName).reversed());</span><br><span class="line"></span><br><span class="line">employees.forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+
+<p>输出，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Employee&#123;name&#x3D;&#39;Keith&#39;, age&#x3D;35, salary&#x3D;4000.0, mobile&#x3D;3924401&#125;</span><br><span class="line">Employee&#123;name&#x3D;&#39;John&#39;, age&#x3D;25, salary&#x3D;3000.0, mobile&#x3D;9922001&#125;</span><br><span class="line">Employee&#123;name&#x3D;&#39;Ace&#39;, age&#x3D;22, salary&#x3D;2000.0, mobile&#x3D;5924001&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="使用-Comparator-nullsFirst进行排序"><a href="#使用-Comparator-nullsFirst进行排序" class="headerlink" title="使用 Comparator.\nullsFirst进行排序"></a>使用 <strong><em>Comparator.\</em></strong>nullsFirst进行排序</h1><p>当集合中存在null元素时，可以使用针对null友好的比较器，null元素排在集合的最前面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">employees.add(null);  &#x2F;&#x2F;插入一个null元素</span><br><span class="line">Collections.sort(employees, Comparator.nullsFirst(Comparator.comparing(Employee::getName)));</span><br><span class="line">employees.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Collections.sort(employees, Comparator.nullsLast(Comparator.comparing(Employee::getName)));</span><br><span class="line">employees.forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="使用-Comparator-thenComparing排序"><a href="#使用-Comparator-thenComparing排序" class="headerlink" title="使用 Comparator*.*thenComparing排序"></a>使用 <strong>Comparator*.*thenComparing排序</strong></h1><p>首先使用 name 排序，紧接着在使用ege 排序，来看下使用效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(employees, Comparator.comparing(Employee::getAge).thenComparing(Employee::getName));</span><br><span class="line">employees.forEach(System.out::println);</span><br></pre></td></tr></table></figure>
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>|<a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/JAVA/" title="JAVA">JAVA</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/springboot-starter/">
+            
+                springboot starter
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="javascript: void(0);">没有下一篇了</a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JAVA总结/JAVA（2020--2023）/Comparator学习' || '1970/01/01/JAVA总结/JAVA（2020--2023）/Comparator学习/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917937.js"></script>
+
+</body>
+</html>

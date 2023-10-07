@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>`JAVA（2020--2023）`分类下的文章 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `JAVA（2020--2023）`分类下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.226Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>eg.B端出库量统计慢，导致C端数据库影响（表面活动的实时库存量需要提前处理，思路定格在活动方面的出库量）后面引申至活动-仓维度库存量。<br>真实库存量问题是订单增量的问题，B端只是要统计然后才有活动要统计出库量的问题。</p>
+<p>订单实时增加，worker去扫描活动中状态活动的出库量自然不如扫描增量订单合适，根本原因是订单状态变化，活动出库量只是表面场景。<br>影响范围有出库量总数，仓维度总数还有日趋势图的出库量。仓维度和总量可以一并做，但是日趋势图这个只要有一单状态变更，要将该活动所有派发日期都有实时汇总一遍，自然有些投入产出不成比例。但不改的话业务口径不统一，正确性会被质疑。</p>
+<p>我们要根本要解决的是C端数据库问题，而统计慢也想一并解决但不是问题根本。所以回归回来就是不进行日趋势图统计，用从库解决C端问题，但作为一个追求完美的人来讲，仓维度和总出库量可以解决就解决，所以，此刻对于正确性问题，可以使用一个动态开关，同时解决C端和统计慢问题，若业务质疑统计一致性，可关闭读中间表的方案，让其实时去查从库。<br>此刻问题解决。<br>==回归方法论：解决问题从根本影响因素出发，解决问题要跟随问题本身，解决问题无法完美时要有兜底方案。==</p>
+<p>问题引申：</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E8%AE%BA/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E8%AE%BA/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.223Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>测试环境 #通用导出<br>11.91.140.68 exp.jd.com</p>
+<p><a target="_blank" rel="noopener" href="https://git.jd.com/jvg/common-export/wikis/4.%E6%8E%A5%E5%85%A5%E7%AC%AC%E4%B8%89%E6%AD%A5%E2%80%94%E2%80%94%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8E%A5%E5%85%A5%E4%BB%A3%E7%A0%81">cf文档</a> </p>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">QueryParamDTO queryParamDTO = <span class="keyword">new</span> QueryParamDTO();</span><br><span class="line">     queryParamDTO.setActivityId(<span class="number">0</span>);</span><br><span class="line">     queryParamDTO.setActivityState(<span class="number">10</span>);</span><br><span class="line">     String param2 = <span class="string">&quot;2xxx&quot;</span>;</span><br><span class="line">     <span class="comment">// vcActivityDataGuideService.getConverterData(queryParamDTO, param2);</span></span><br><span class="line">     <span class="comment">//模拟 模拟 模拟 模拟  业务代码参数，你需要换成你自己的业务代码</span></span><br><span class="line">     Title title1 = <span class="keyword">new</span> Title(<span class="string">&quot;item.data==dcId&quot;</span>,<span class="string">&quot;data&quot;</span>,<span class="string">&quot;item.data == null ? null: item.data.dcId&quot;</span>);</span><br><span class="line">     Title title2 = <span class="keyword">new</span> Title(<span class="string">&quot;dcId&quot;</span>,<span class="string">&quot;data&quot;</span>, <span class="string">&quot;item.data.dcId&quot;</span>);</span><br><span class="line">     Title title2_1 = <span class="keyword">new</span> Title(<span class="string">&quot;item.data==item.data.dcName&quot;</span>,<span class="string">&quot;data&quot;</span>, <span class="string">&quot;item.data == null ? null: item.data.dcName&quot;</span>);</span><br><span class="line">     Title title2_2 = <span class="keyword">new</span> Title(<span class="string">&quot;item.data.dcName&quot;</span>,<span class="string">&quot;data&quot;</span>, <span class="string">&quot;item.data.dcName&quot;</span>);</span><br><span class="line">     Title title3 = <span class="keyword">new</span> Title(<span class="string">&quot;Str&quot;</span>,<span class="string">&quot;data1&quot;</span>);</span><br><span class="line">     List&lt;Title&gt; list = Lists.newArrayList(title1,title2,title2_1,title2_2,title3);</span><br><span class="line">     ExportRequest exportRequest = JsfExportRequestBuilder.newBuilder()</span><br><span class="line">             .withExportCode(<span class="string">&quot;vc_p009_b012_zk&quot;</span>)  <span class="comment">//设置导出code,你在平台上配置的 （可以在代码中写死，不用提取成变量，让用户填写一个code的目的就是简化测试和生产环境的变量区分）</span></span><br><span class="line">             .withDynamicTitle(list)</span><br><span class="line">             .withParameters(queryParamDTO,param2) <span class="comment">//数据提供方参数(你接口怎么传就怎么写)</span></span><br><span class="line">             .withOperator(<span class="string">&quot;sunya06&quot;</span>)<span class="comment">//操作人</span></span><br><span class="line">             .build();<span class="comment">//最后build对象别忘了</span></span><br><span class="line">     <span class="comment">//调用同步导出方法，根据你的需要选择是同步还是异步</span></span><br><span class="line">     ExportResponse exportResponse = commonExportService.syncExport(exportRequest);</span><br><span class="line">     log.info(exportResponse.getResult()+<span class="string">&quot;===同步导出返回= url=================&quot;</span>);</span><br><span class="line"></span><br><span class="line">     ExportResponse exportResponse1 = commonExportService.asyncExport(exportRequest);</span><br><span class="line">     log.info(exportResponse1.getResult()+<span class="string">&quot;===异步导出返回= uuid=================&quot;</span>);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> <span class="string">&quot;sync:&quot;</span> + exportResponse.getResult() + <span class="string">&quot;-----async:&quot;</span> + exportResponse1.getResult();</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;ConverterData&gt; <span class="title">getConverterData</span><span class="params">(QueryParamDTO queryParam, String str)</span> </span>&#123;</span><br><span class="line">    log.info(<span class="string">&quot;回调开始，queryParam:&#123;&#125;,str:&#123;&#125;&quot;</span>,queryParam,str);</span><br><span class="line">    List&lt;ConverterData&gt; converterDatas = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)&#123;</span><br><span class="line">        ConverterData converterData = <span class="keyword">new</span> ConverterData();</span><br><span class="line">        DcVO dcVO = <span class="keyword">new</span> DcVO();</span><br><span class="line">        dcVO.setDcId(i);</span><br><span class="line">        dcVO.setDcName(<span class="string">&quot;Name-&quot;</span> + i);</span><br><span class="line">        converterData.setData(dcVO);</span><br><span class="line">        converterData.setData1(<span class="string">&quot;str-&quot;</span>+ str + (<span class="number">10</span>+i));</span><br><span class="line">        converterDatas.add(converterData);</span><br><span class="line">    &#125;</span><br><span class="line">    log.info(<span class="string">&quot;回调结束，converterDatas：&#123;&#125;&quot;</span>,converterDatas);</span><br><span class="line">    <span class="keyword">return</span> converterDatas;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E9%80%9A%E7%94%A8%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E9%80%9A%E7%94%A8%E5%AF%BC%E5%87%BA%E5%8A%9F%E8%83%BD/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.211Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.jd.y.upack.core.service.core.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.jd.y.upack.core.config.dynamic.match.ServiceSwitchConfig;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.JoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.*;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Modifier;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 功能描述：</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: zhangkai324</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2021/9/6 16:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServiceCheckAspect</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    com.jd.y.upack.core.config.dynamic.match.ServiceSwitchConfig serviceSwitchConfig;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(&quot;@annotation(com.jd.y.upack.core.service.core.config.ServiceCheck)&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">login</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Before(&quot;@annotation(sv)&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demoBefore</span><span class="params">(JoinPoint joinPoint, ServiceCheck sv)</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">&quot;@before 开始&quot;</span>);</span><br><span class="line">        log.info(<span class="string">&quot;注解参数:&quot;</span>+sv.switchName()+<span class="string">&quot;:&quot;</span>+sv.retryGateKey());</span><br><span class="line">        log.info(<span class="string">&quot;目标方法的参数对象:&#123;&#125;&quot;</span>,  joinPoint.getArgs().toString());</span><br><span class="line">        log.info(<span class="string">&quot;被代理的对象:&#123;&#125;&quot;</span>,  joinPoint.getTarget());</span><br><span class="line">        log.info(<span class="string">&quot;代理对象:&#123;&#125;&quot;</span>,  joinPoint.getThis());</span><br><span class="line">        log.info(<span class="string">&quot;目标方法名为:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getName());</span><br><span class="line">        log.info(<span class="string">&quot;目标方法所属类的简单类名:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getDeclaringType().getSimpleName());</span><br><span class="line">        log.info(<span class="string">&quot;目标方法所属类的类名:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getDeclaringTypeName());</span><br><span class="line">        log.info(<span class="string">&quot;目标方法声明类型:&#123;&#125;&quot;</span>,  Modifier.toString(joinPoint.getSignature().getModifiers()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@After(&quot;login()&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demoAfter</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//....</span></span><br><span class="line">        log.info(<span class="string">&quot;@After 结束.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterThrowing(&quot;login()&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demoAfterThrowing</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//....</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Around(&quot;@annotation(sv)&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">demoAround</span><span class="params">(ProceedingJoinPoint pjp, ServiceCheck sv)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">&quot;@Around 开始校验。。。&quot;</span>);</span><br><span class="line">        Object[] args = pjp.getArgs();</span><br><span class="line">        log.info(<span class="string">&quot;@Around &#123;&#125;，sv.RetryGateKey()：&#123;&#125;。。。&quot;</span>, sv.switchName(), sv.retryGateKey());</span><br><span class="line"></span><br><span class="line">        Class x = serviceSwitchConfig.getClass();</span><br><span class="line">        Field declaredField = x.getDeclaredField(sv.switchName());</span><br><span class="line">        declaredField.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">boolean</span> switchOn = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        Object o1;</span><br><span class="line">        <span class="keyword">if</span>(declaredField  == <span class="keyword">null</span>)&#123;</span><br><span class="line">            log.info(<span class="string">&quot;switchName:&#123;&#125; , true&quot;</span>, sv.switchName());</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// switchOn = declaredField.getBoolean(serviceSwitchConfig);</span></span><br><span class="line">            o1 = declaredField.get(serviceSwitchConfig);</span><br><span class="line">            <span class="keyword">if</span>(o1 <span class="keyword">instanceof</span> Boolean)&#123;</span><br><span class="line">                switchOn = (<span class="keyword">boolean</span>)o1;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                log.info(<span class="string">&quot;######&#123;&#125; switchOn param is uncorrect.&quot;</span>, sv.switchName());</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!switchOn)&#123;</span><br><span class="line">            log.info(<span class="string">&quot;######&#123;&#125; switchOn is off.&quot;</span>, sv.switchName());</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Object proceed = pjp.proceed(args);</span><br><span class="line">        log.info(<span class="string">&quot;@Around ：&#123;&#125;。。。&quot;</span>, proceed);</span><br><span class="line">        <span class="keyword">return</span> proceed;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>@Around 环绕有返回值, 其他没有返回值，只是日志记录或者做些前置后置操作。</p>
+<ul>
+<li>执行顺序  @Around， @Before,  ProceedingJoinPoint.processd, @Around, @After</li>
+</ul>
+</li>
+<li><p>before中 反射输出：</p>
+<p></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Pointcut(&quot;@annotation(com.jd.y.upack.core.service.core.config.ServiceCheck) || execution(public * com.jd.y.upack.core.service.*.*(..))&quot;)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dataPointCut</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@Before(&quot;dataPointCut()&quot;)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demoBefore</span><span class="params">(JoinPoint joinPoint)</span> </span>&#123;</span><br><span class="line">       log.info(<span class="string">&quot;@before 开始&quot;</span>);</span><br><span class="line">       log.info(<span class="string">&quot;目标方法的参数对象:&#123;&#125;&quot;</span>,  joinPoint.getArgs().toString());</span><br><span class="line">       log.info(<span class="string">&quot;被代理的对象:&#123;&#125;&quot;</span>,  joinPoint.getTarget());</span><br><span class="line">       log.info(<span class="string">&quot;代理对象:&#123;&#125;&quot;</span>,  joinPoint.getThis());</span><br><span class="line">       log.info(<span class="string">&quot;目标方法名为:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getName());</span><br><span class="line">       log.info(<span class="string">&quot;目标方法所属类的简单类名:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getDeclaringType().getSimpleName());</span><br><span class="line">       log.info(<span class="string">&quot;目标方法所属类的类名:&#123;&#125;&quot;</span>,  joinPoint.getSignature().getDeclaringTypeName());</span><br><span class="line">       log.info(<span class="string">&quot;目标方法声明类型:&#123;&#125;&quot;</span>,  Modifier.toString(joinPoint.getSignature().getModifiers()));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Around(&quot;dataPointCut() &amp;&amp; @annotation(sv)&quot;)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> Object <span class="title">demoAround</span><span class="params">(ProceedingJoinPoint pjp, ServiceCheck sv)</span> <span class="keyword">throws</span> Throwable </span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>切点pointCut 上可以有普通逻辑运算符 &amp;&amp; || ！</li>
+<li>切面支持切接口，但是PointCut需要写包名/类名直接切。</li>
+<li>注解方式测试不支持接口切面</li>
+<li>注意切点上的**&amp;&amp;**，必须同时满足</li>
+</ol>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.197Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="d"><a href="#d" class="headerlink" title="d"></a>d</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_55624813/article/details/121316293">数组维护堆，堆排序</a></p>
+<p>大顶堆，小顶堆（完全二叉树）</p>
+<p>TOPK（最小的K个数则使用大顶堆，剩的最终的堆内容为最小的TOPK）</p>
+<blockquote>
+<p>1.建堆 （从非叶子节点开始，直到顶点）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实际是 ((arr.length - 1) - 1) / 2</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = (arr.length - <span class="number">2</span>) / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="comment">// 每个非叶子结点都需要做下沉操作，从最后一个开始往前遍历</span></span><br><span class="line">    downAdjust(arr, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.调整 （构建的大顶堆，剔除最大的父节点，然后下沉节点）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 最小的K个数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> arr</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> heap</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> k</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">topKSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] heap, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = k; i&lt; arr.length; i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> current = arr[i];</span><br><span class="line">        <span class="keyword">if</span>(current &gt; heap[<span class="number">0</span>])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//调整堆</span></span><br><span class="line">        heap[<span class="number">0</span>] = current;</span><br><span class="line">        downAdjustTopK(heap, <span class="number">0</span>,<span class="number">5</span>);</span><br><span class="line">        Arrays.stream(heap).forEach(t-&gt;System.out.print(t+<span class="string">&quot;,&quot;</span>));</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 建堆，调整</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> arr 原始数据数组</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> currentIndex 调整的节点索引号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> k 堆大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downAdjustTopK</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> currentIndex, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = arr[currentIndex];</span><br><span class="line">        <span class="keyword">int</span> childIndex = <span class="number">2</span> * currentIndex + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (childIndex &lt; k) &#123;</span><br><span class="line">            <span class="comment">// 判断是左孩子还是右孩子</span></span><br><span class="line">            <span class="keyword">if</span> (childIndex + <span class="number">1</span> &lt; k &amp;&amp; arr[childIndex] &lt; arr[childIndex+<span class="number">1</span>]) &#123;</span><br><span class="line">                childIndex++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 若发现不满足循环条件即可跳出</span></span><br><span class="line">            <span class="keyword">if</span> (tmp &gt;= arr[childIndex]) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 单向赋值，无交换</span></span><br><span class="line">            arr[currentIndex] = arr[childIndex];</span><br><span class="line">            currentIndex = childIndex;</span><br><span class="line">            childIndex = <span class="number">2</span> * currentIndex + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[currentIndex] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E7%AE%97%E6%B3%95-TOPK/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E7%AE%97%E6%B3%95-TOPK/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.169Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> autocommit=<span class="number">0</span>;   设置</span><br><span class="line"> <span class="keyword">select</span> @@autocommit;   查看或者  <span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">&#x27;AUTOCOMMIT&#x27;</span>;</span><br><span class="line"> 注意： 只在当前IDE界面生效</span><br></pre></td></tr></table></figure>
+
+<p>除了以上设置，可由<code>begin；</code>开始，或者<code>**start transaction;**</code></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hju22/article/details/86651973">MySQL事务语法学习</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.suibibk.com/topic/771792414850416640">MySQL执行update语句是锁行还是锁表分析</a></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9B%B4%E6%96%B0%E8%A1%8C%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9B%B4%E6%96%B0%E8%A1%8C%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.155Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>  应用方法监控： </p>
+<p>  数据库DB当时QPS： </p>
+<p> 数据库CPU监控图：  </p>
+<p>跟进DBA和架构师了解到：</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95TP99%E9%A3%99%E5%8D%87%EF%BC%8CMysql%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95TP99%E9%A3%99%E5%8D%87%EF%BC%8CMysql%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.139Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.jmq基础知识</p>
+<ul>
+<li><p>TransportConfig 常用属性说明(此类型对应spring配置文件中的 &lt;jmq:transport …/&gt;标签)</p>
+</li>
+<li><p>app不重要  关注address user pass、</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>maxConcurrent</code></th>
+<th><code>连接单组broker最大并发数,客户端实际线程数为单组运行的线程数*broker数（一般不需要配置，默认等于对列数）</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>minConcurrent</code></td>
+<td><code>连接单组broker最小并发数（一般不需要配置）</code></td>
+</tr>
+</tbody></table>
+
+<p>[<a target="_blank" rel="noopener" href="https://cf.jd.com/pages/viewpage.action?pageId=198882084">JMQ客户端使用说明</a>]<a target="_blank" rel="noopener" href="https://cf.jd.com/pages/viewpage.action?pageId=198882084">https://cf.jd.com/pages/viewpage.action?pageId=198882084</a></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E5%85%AC%E5%8F%B8%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AD%A6%E4%B9%A0/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E5%85%AC%E5%8F%B8%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AD%A6%E4%B9%A0/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.133Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>事务的传播行为，默认值为 Propagation.REQUIRED。可以手动指定其他的事务传播行为，如下：</p>
+<ul>
+<li>Propagation.REQUIRED</li>
+</ul>
+<p>如果当前存在事务，则加入该事务，如果当前不存在事务，则创建一个新的事务。</p>
+<ul>
+<li>Propagation.SUPPORTS</li>
+</ul>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E4%BA%8B%E5%8A%A1/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/%E4%BA%8B%E5%8A%A1/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.108Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.左关联  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.specialCount, b.commonCount <span class="keyword">from</span> </span><br><span class="line">(<span class="keyword">select</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">as</span> <span class="keyword">col</span> ,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> specialCount</span><br><span class="line"><span class="keyword">from</span> order_record </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">id</span> &gt;(<span class="keyword">select</span> <span class="keyword">version</span> <span class="keyword">from</span> global_value <span class="keyword">where</span> <span class="keyword">type</span>=<span class="number">71</span>) <span class="keyword">and</span> dc_id=<span class="number">5</span> <span class="keyword">and</span> store_id=<span class="number">222</span></span><br><span class="line">)a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">as</span> <span class="keyword">col</span> ,<span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">as</span> commonCount</span><br><span class="line"><span class="keyword">from</span> order_record </span><br><span class="line"><span class="keyword">where</span> <span class="keyword">id</span> &gt;(<span class="keyword">select</span> <span class="keyword">version</span> <span class="keyword">from</span> global_value <span class="keyword">where</span> <span class="keyword">type</span>=<span class="number">71</span>) <span class="keyword">and</span> send_type=<span class="number">1</span> <span class="keyword">and</span> ref_order_id <span class="keyword">is</span> <span class="literal">null</span> </span><br><span class="line">)b</span><br><span class="line"><span class="keyword">on</span> a.col = b.col</span><br></pre></td></tr></table></figure>
+
+<p>2.if+聚合函数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(<span class="keyword">if</span>(<span class="keyword">uuid</span>=<span class="string">&#x27;专仓试用品&#x27;</span>,matchCount,<span class="number">0</span>))<span class="keyword">as</span> specialType,<span class="keyword">sum</span>(<span class="keyword">if</span>(<span class="keyword">uuid</span>=<span class="string">&#x27;同仓试用品&#x27;</span>,matchCount,<span class="number">0</span>))<span class="keyword">as</span> commonType,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">if</span>(<span class="keyword">uuid</span>=<span class="string">&#x27;虚拟仓虚拟品&#x27;</span>,matchCount,<span class="number">0</span>)) <span class="keyword">as</span> virtualType <span class="keyword">from</span> (</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">uuid</span>, <span class="keyword">sum</span>(data_id)   <span class="keyword">as</span> matchCount <span class="keyword">from</span> temp_data</span><br><span class="line"> <span class="keyword">where</span> <span class="keyword">id</span>&gt;<span class="number">9939</span> <span class="keyword">and</span> <span class="keyword">substring</span>(create_by,<span class="number">1</span>,<span class="number">10</span>)  = <span class="built_in">date</span>(<span class="string">&#x27;2022-06-18&#x27;</span>) <span class="keyword">and</span> <span class="keyword">uuid</span> <span class="keyword">in</span> (<span class="string">&#x27;专仓试用品&#x27;</span>,<span class="string">&#x27;同仓试用品&#x27;</span>,<span class="string">&#x27;虚拟仓虚拟品&#x27;</span>) </span><br><span class="line"> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">uuid</span> </span><br><span class="line"> )t</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/SQL%E8%A1%8C%E8%BD%AC%E5%88%97%EF%BC%8C%E5%88%97%E8%BD%AC%E8%A1%8C/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/SQL%E8%A1%8C%E8%BD%AC%E5%88%97%EF%BC%8C%E5%88%97%E8%BD%AC%E8%A1%8C/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.096Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Spring开发遇到问题</p>
+<p><code>date:2022.02.25</code></p>
+<p>1.循环依赖问题</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tiger-fu/p/8961361.html"><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tiger-fu/p/8961361.html">浅谈Spring解决循环依赖的三种方式</a></a></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/page/2/">2</a><a class="page-number" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/page/3/">3</a><a class="extend next" rel="next" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917992.js"></script>
+
+</body>
+</html>

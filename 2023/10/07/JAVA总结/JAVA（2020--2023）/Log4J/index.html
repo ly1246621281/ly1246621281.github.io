@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>f | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>f</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2023-10-07T06:55:26.968Z">2023-10-07</time>
+    </p>
+    <div class="post-content">
+        <h1 id="Log4J"><a href="#Log4J" class="headerlink" title="Log4J"></a>Log4J</h1><h2 id="1-耗时项"><a href="#1-耗时项" class="headerlink" title="1.耗时项"></a>1.耗时项</h2><ol>
+<li><p>格式化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">logger.debug(&quot;Entry number: &#123;&#125; is &#123;&#125;&quot;, i, entry[i]);</span><br><span class="line">修改为：</span><br><span class="line">if(log.isDebugEnabled)&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>记录方法名，行号等信息</p>
+<blockquote>
+<p><em>捕获调用方位置对所有日志库都有类似的影响，并且会减慢异步日志记录的速度大约 30-100 倍</em>。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="2-对比"><a href="#2-对比" class="headerlink" title="2.对比"></a>2.对比</h2><ul>
+<li>从同步文件记录-吞吐量-响应时长对比</li>
+</ul>
+<p>log4j2&gt; log4j1 &gt;logback</p>
+<p><a target="_blank" rel="noopener" href="https://logging.apache.org/log4j/2.x/performance.html">https://logging.apache.org/log4j/2.x/performance.html</a></p>
+<ul>
+<li><p>针对log4j2的Appender来讲</p>
+<blockquote>
+<p>备选：File、RandomAccessFile 和 MemoryMappedFile </p>
+<p>性能最佳：RandomAccessFile 和 MemoryMappedFile </p>
+<p>MemoryMappedFile 无滚动变体</p>
+<p>—事实证明，与 Log4j 2.5 相比，2.6 中的无垃圾文本编码逻辑为这些附加程序提供了性能提升。过去 RandomAccessFile appender 明显更快，尤其是在多线程场景中，但随着 2.6 版本的发布，File appender 性能有所提高，这两个 appender 之间的性能差异更小。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3-异步日志"><a href="#3-异步日志" class="headerlink" title="3.异步日志"></a>3.异步日志</h2><p>异步日志记录可以通过在单独的线程中执行 I/O 操作来提高应用程序的性能，同步线程格式化，记录输出样式，异步线程去做IO。</p>
+<p>1.使用方式</p>
+<p><em>Log4j-2.9 和更高版本需要在类路径上使用disruptor-3.3.4.jar 或更高版本。在 Log4j-2.9 之前，需要disruptor-3.0.0.jar 或更高版本。</em></p>
+<blockquote>
+<p>这是最简单的配置并提供最佳性能。要使所有记录器异步，请将中断器 jar 添加到类路径并将系统属性设置<code>log4j2.contextSelector</code> 为<code>org.apache.logging.log4j.core.async.AsyncLoggerContextSelector</code>or <code>org.apache.logging.log4j.core.async.BasicAsyncLoggerContextSelector</code>。</p>
+</blockquote>
+<p>2.注意事项</p>
+<p><code>includeLocation=&quot;true&quot;</code> 会影响性能，但是其可以将日志方法名、行号等信息传递给IO线程。</p>
+<p>对于异步日志来说，使用位置进行记录比不使用位置慢 30-100 倍。</p>
+<p>3.异步日志记录性能</p>
+<p>在 64 线程的测试中，异步 logger 比异步 appender 快 12 倍，比同步 logger 快 68 倍。</p>
+<p>对于异步追加器，当添加更多线程时，所有线程的总日志记录吞吐量大致保持不变。异步记录器在多线程场景中更有效地利用机器上可用的多个内核。</p>
+<p><img src="https://logging.apache.org/log4j/2.x/images/async-throughput-comparison.png" alt="异步记录器具有最高的吞吐量。"></p>
+<p><a target="_blank" rel="noopener" href="https://logging.apache.org/log4j/2.x/manual/async.html">https://logging.apache.org/log4j/2.x/manual/async.html</a></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>|<a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Mockito%E4%BD%BF%E7%94%A8%E6%95%B4%E7%90%86/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA8%20LocalDate/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JAVA总结/JAVA（2020--2023）/Log4J' || '2023/10/07/JAVA总结/JAVA（2020--2023）/Log4J/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917912.js"></script>
+
+</body>
+</html>

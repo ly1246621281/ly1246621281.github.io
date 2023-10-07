@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>文章归档: 2023/10 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/2023/10/page/2/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/2023/10/page/2/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/archives/2023/10/page/2/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/2023/10/page/2/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.501Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="试用品提单"><a href="#试用品提单" class="headerlink" title="试用品提单"></a>试用品提单</h1><h2 id="1-提单接口"><a href="#1-提单接口" class="headerlink" title="1.提单接口"></a>1.提单接口</h2><blockquote>
+<p>1.判断 提单渠道bizType （0依赖商品信息 ，1依赖活动信息为主）</p>
+<p>2.判断 提单类型（普通类型，虚拟组套类型，其他扩展类型）</p>
+<p>3.提单</p>
+</blockquote>
+<h2 id="2-本次主要对依赖活动项提单改造"><a href="#2-本次主要对依赖活动项提单改造" class="headerlink" title="2. 本次主要对依赖活动项提单改造"></a>2. 本次主要对依赖活动项提单改造</h2><blockquote>
+<p>1.前置校验</p>
+<ul>
+<li>必要校验</li>
+<li>增加缓存库存量校验</li>
+<li>增加单仓限制缓存校验</li>
+</ul>
+<p>2.沿用原有流程，先扣减库存后续提单</p>
+<ul>
+<li><p>提单确定提单类型（查activityParam表是否虚拟组套字段– 主数据字段对比）</p>
+</li>
+<li><p>下单（若为虚拟组套商品时 子商品去activityParam）</p>
+</li>
+</ul>
+<p>3.后续持久化：</p>
+<ul>
+<li><p>120天缓存放置</p>
+</li>
+<li><p>活动和pin的映射关系 100day</p>
+</li>
+<li><p>仓库限制（rest_count量和单仓量）</p>
+</li>
+<li><p><strong>不放当日pin缓存和1.5成功缓存</strong></p>
+</li>
+<li><p>异步落库要修改短信模板</p>
+</li>
+<li><p>逆向：回滚库存+移除120缓存</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="3-根据SKU提单（后期扩展）"><a href="#3-根据SKU提单（后期扩展）" class="headerlink" title="3. 根据SKU提单（后期扩展）"></a>3. 根据SKU提单（后期扩展）</h2><blockquote>
+<p>1.前置校验</p>
+<p>2.根据SKU确定提单类型（后续可能按其他信息确定提单类型）</p>
+<ul>
+<li>提单类型：虚拟组套时读取商品主数据识别是否为组套商品</li>
+</ul>
+<p>3.提单</p>
+<ul>
+<li>若为组套提单类型，需调用商品主数据读取实物SKU列表</li>
+<li>后续其他业务扩展</li>
+</ul>
+<p>4.落库</p>
+<ul>
+<li>只插入OrderRecord记录；后续业务扩展</li>
+</ul>
+</blockquote>
+<h2 id="4-其他工作"><a href="#4-其他工作" class="headerlink" title="4. 其他工作"></a>4. 其他工作</h2><blockquote>
+<ol>
+<li>短信模板</li>
+<li>不露出楼层和push消息</li>
+<li>逆向取消应该不需改动</li>
+<li>库存不足时暂停活动，告知业务</li>
+</ol>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/ly1246621281/PicGo/main/img/image-20210806221143012.png" alt="image-20210806221143012"></p>
+
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E6%8F%90%E5%8D%95/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E6%8F%90%E5%8D%95/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.491Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ul>
+<li>活动相关</li>
+</ul>
+<ol>
+<li>试用品目前派发类型有试用品类型（包括虚拟品）、话卡类型</li>
+<li>试用品领取模式包括 被动派发（包括九宫格）、主动领取（目前促销母婴，校园虚拟组套）</li>
+<li>试用品渠道类型包括 0 通用渠道，1 母婴主动， 2.九宫格，3 校园渠道</li>
+<li>试用品仓库模式包括 0 同仓模式，1专仓模式 ，2虚拟仓模式</li>
+</ol>
+<ul>
+<li><p>匹配相关</p>
+<ol>
+<li><p>用户单日可参与 一次同仓试用品  或者 一次专仓试用品（可以带走话卡）或者 一次话卡</p>
+<p>另外虚拟品 和 物流和他们并列可一并参与</p>
+</li>
+<li><p>用户相关的pin </p>
+
+</li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ul>
+<ol>
+<li> 父单匹配问题未搞定</li>
+<li>拆单问题解决使用同步锁但后续失败会导致今日用户无法再次参与。</li>
+</ol>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E5%8C%B9%E9%85%8D%E3%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E5%92%8C%E6%8F%90%E5%8D%95/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E5%8C%B9%E9%85%8D%E3%80%81%E6%8C%81%E4%B9%85%E5%8C%96%E5%92%8C%E6%8F%90%E5%8D%95/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.482Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>接口全名：com.jd.y.upack.core.api.service.UpmpPrintService#getUpmpPrintInfo</p>
+<p>测试环境token: 暂无</p>
+<p>预发环境token: 暂无</p>
+<p>联系人： <a href="mailto:zhangkai324@jd.com">zhangkai324@jd.com</a></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E4%BC%97%E9%82%AE%E4%BA%91%E6%89%93%E5%8D%B0%E4%BF%A1%E6%81%AF%E6%8E%A5%E5%8F%A3/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E4%BC%97%E9%82%AE%E4%BA%91%E6%89%93%E5%8D%B0%E4%BF%A1%E6%81%AF%E6%8E%A5%E5%8F%A3/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.444Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>单行更新，在启动10个压测脚本，并行量为275时，出现行锁发生。</p>
+<ol>
+<li><p>mysql处设置行锁释放时间</p>
+<p>mysql查询到可以设置行锁等待超时时间，超时时间到之后发出timeoutException.网上多是增加超时时间，避免出错。亦或是找到行锁线程，kill掉解决.</p>
+<p><code> show variables like &#39;innodb_lock_wait_timeout&#39;;</code> dbquery默认30s.</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/christopherchan/p/12390819.html">1.mysql超时分析</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.51testing.com/html/16/390216-838016.html">2.mysql超时分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/educast/article/details/78824028">3.Transactional超时时间控制与mysql事务超时时间：</a></p>
+</li>
+<li><p>spring事务与mysql事务处设置</p>
+<p>当前为当行语句行锁发生，不涉及，参考如上3</p>
+</li>
+<li><p>mysql单行超时设置</p>
+<p>单行超时释放连接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;getXXXX&quot; parameterType&#x3D;&quot;java.lang.String&quot; resultMap&#x3D;&quot;dataMap&quot; timeout&#x3D;&quot;1&quot;&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/shuimuz_j/article/details/9674427">Mybatis设置sql超时时间</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_28707365/article/details/113241314?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5.no_search_link">很全的分析=-==mybatis设置MySQL超时时间_怎样配置MySQL数据库超时设置？</a></p>
+<p>很全的分析 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43746959">https://zhuanlan.zhihu.com/p/43746959</a></p>
+</li>
+</ol>
+<p>   为了验证上面问题，使用了Mysql的查询进程命令</p>
+<p>   <code> show full processlist ;</code></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.427Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>PRD：</p>
+<p>1.一试爱上新增菜单<br>2.一试爱上新增用户角色（试用频道平台运营和试用频道采销）<br>3.历史用户支持批量导入，并查看<br>4.采销端需提供角色开通–接口–，前端去识别用户是否有菜单权限？<br>5.VC侧venderId展示需屏蔽试用频道活动展示<br>6.shop权限不去考虑变更，无工作量？</p>
+<p>对外提供：<strong>复用校园渠道相关，但是不能影响之前的接口功能</strong><br>1.状态变更MQ<br>2.提供活动查询接口<br>3.</p>
+<p>对试用频道调用：<br>1.申请完成时间Worker发起查询申请用户URL，人数等JSF调用<br>2.接口筛选名单结束MQ<br>3.发起中选用户查询JSF  是否合一个？</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%9E%8D%E5%90%88%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%9E%8D%E5%90%88%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.424Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>匹配依托活动</p>
+<p>1.仓库模式（虚拟仓）</p>
+<p>2.按仓 配找活动，识别仓库模式若为虚拟仓，则是虚拟品派发</p>
+<p> 在原同仓 专仓处识别若仓库模式为虚拟品则跳出该活动。</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%99%9A%E6%8B%9F%E5%93%81%E6%B4%BE%E5%8F%91/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E8%99%9A%E6%8B%9F%E5%93%81%E6%B4%BE%E5%8F%91/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.389Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>分布式4台容灾机器，由一台机器去拉取远端缓存并广播消息通知各C端前置容器。4台机器每台容器有10ms的定时任务去拉取远端缓存。</p>
+<p>4台容灾机器抢分布式锁保证只有一台容器执行，选定的容器10ms执行一次任务，1分钟执行6K次；但生产的ump监控仅1分钟百十次。</p>
+<p></p>
+
+<p>1.各分布式容器可能有时钟误差，因此使用远端的时钟</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%9A%E6%AF%AB%E7%A7%92%E7%B2%92%E5%BA%A6%E8%AF%89%E6%B1%82%E9%80%A0%E6%88%90%E9%97%AE%E9%A2%98/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E7%94%9F%E4%BA%A7%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%EF%BC%9A%E6%AF%AB%E7%A7%92%E7%B2%92%E5%BA%A6%E8%AF%89%E6%B1%82%E9%80%A0%E6%88%90%E9%97%AE%E9%A2%98/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.381Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="活动终止方案评审（2020-11-23）"><a href="#活动终止方案评审（2020-11-23）" class="headerlink" title="活动终止方案评审（2020.11.23）"></a>活动终止方案评审（2020.11.23）</h1><h2 id="1-终止活动"><a href="#1-终止活动" class="headerlink" title="1.终止活动"></a>1.终止活动</h2><h3 id="1-1前端工作"><a href="#1-1前端工作" class="headerlink" title="1.1前端工作"></a>1.1前端工作</h3><ul>
+<li><p>前端校验用户角色类型</p>
+</li>
+<li><p>前端提供活动状态置灰与选择</p>
+</li>
+<li><p>前端增加终止活动弹框</p>
+</li>
+<li><p>关联改动中 前端新增活动状态：“已终止”</p>
+</li>
+<li><p>关联改动中 前端修改活动进度增加“已终止”节点</p>
+</li>
+</ul>
+<h3 id="1-2后端工作"><a href="#1-2后端工作" class="headerlink" title="1.2后端工作"></a>1.2后端工作</h3><ul>
+<li><p>后端校验用户角色类型</p>
+</li>
+<li><p>后端判断活动状态是否可进行活动终止</p>
+</li>
+<li><p>后端提供活动终止接口（释放库存、停止派发，记录终止操作的操作人和操作时间）</p>
+<blockquote>
+<p>1.修改活动状态，并写入审计表中。</p>
+<p>2.使用CompleteActivityJob，每分钟一次，若活动状态为终止同时是试用品or话卡活动，去释放库存。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-3-需修改前后端接口项"><a href="#1-3-需修改前后端接口项" class="headerlink" title="1.3 需修改前后端接口项"></a>1.3 需修改前后端接口项</h3><ul>
+<li>前后端增加活动状态–31为已终止</li>
+<li>前后端活动实体类增加字段 “preStatus” :前置状态位</li>
+</ul>
+<blockquote>
+<p> <strong>“preStatus”</strong> : 30, // 整型, 活动状态, (值含义: -1：未知状态，1:草稿, 2:采销审核中, 3:平台运营审核中, 4. 驳回, 5:已创建, 6:开启中, 7:开启失败, 8:待开始, 9:活动中, 10:暂停, 30:已完成，31:已终止)；</p>
+<p> 若是已完成之后终止，则为30，其他前置活动状态的终止都是在已完成前终止。注：若是找不到前置活动状态，-1为未知状态；</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%B4%BB%E5%8A%A8%E7%BB%88%E6%AD%A2%E6%96%B9%E6%A1%88%E8%AF%84%E5%AE%A1%EF%BC%882020.11.23%EF%BC%89/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%B4%BB%E5%8A%A8%E7%BB%88%E6%AD%A2%E6%96%B9%E6%A1%88%E8%AF%84%E5%AE%A1%EF%BC%882020.11.23%EF%BC%89/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.369Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>定位日志：发现问题时间，确定影响范围。</p>
+<p>解决问题：</p>
+<ol>
+<li><p>先保留错误数据，如果修复失败要回滚（毕竟线上数据）</p>
+</li>
+<li><p>对仓维度统计正确的和 总量不正确的进行关联。（排查是否全部专仓，以及总条数等）</p>
+</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.activity_id,a.type <span class="keyword">as</span> allt,b.type <span class="keyword">as</span> dct,b.key <span class="keyword">as</span> dcstore,a.<span class="string">`value`</span> <span class="keyword">as</span> allv,b.<span class="string">`value`</span> <span class="keyword">as</span> dcb <span class="keyword">from</span></span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> activity_order_mid </span><br><span class="line"><span class="keyword">where</span> create_time &gt;= <span class="string">&#x27;2022-11-28 13:11&#x27;</span> <span class="keyword">and</span> create_time&lt;<span class="string">&#x27;2022-11-28 13:16&#x27;</span> <span class="keyword">and</span> <span class="keyword">type</span>=<span class="number">1</span></span><br><span class="line">)a</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(</span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> activity_order_mid </span><br><span class="line"><span class="keyword">where</span> create_time &gt;= <span class="string">&#x27;2022-11-28 13:11&#x27;</span> <span class="keyword">and</span> create_time&lt;<span class="string">&#x27;2022-11-28 13:16&#x27;</span> <span class="keyword">and</span> <span class="keyword">type</span>=<span class="number">2</span> <span class="keyword">and</span> <span class="string">`key`</span>=<span class="string">&#x27;5-222&#x27;</span></span><br><span class="line">)b </span><br><span class="line"><span class="keyword">on</span> a.activity_id = b.activity_id</span><br><span class="line"><span class="keyword">where</span> a.<span class="string">`value`</span> &gt;b.<span class="string">`value`</span>    </span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> a.activity_id</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%87%BA%E5%BA%93%E5%AE%9E%E6%97%B6worker%E5%BC%82%E5%B8%B8/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%87%BA%E5%BA%93%E5%AE%9E%E6%97%B6worker%E5%BC%82%E5%B8%B8/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T07:10:27.356Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ul>
+<li><p>封装库存按SKU.仓库模式查询接口DataResponse&lt;List<warehousedistdto>&gt; getAllStoreStockInfoListBySku(Long sku, WarehouseType warehouseType);</warehousedistdto></p>
+
+</li>
+<li><p>封装同仓活动加锁，解锁接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">DataResponse <span class="title">lockCommonWarehouseStock</span><span class="params">(String user, UpdateWarehouseDTO updateWarehouseDTO)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function">DataResponse <span class="title">unlockCommonWarehouseStock</span><span class="params">(String user, UpdateWarehouseDTO updateWarehouseDTO)</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li>修改库存扣减接口，移除扣减完持久化后续存储代码</li>
+</ul>
+
+<ul>
+<li>封装 订单匹配后，库存扣减接口(封装 单仓扣减逻辑)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> DataResponse <span class="title">orderStockReduce</span><span class="params">(OrderRequestDTO orderRequestDTO, ActivityDTO activityDTO)</span> </span></span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%8A%80%E6%94%B9%E5%BA%93%E5%AD%98%E6%96%B0%E5%A2%9E%E7%9B%B8%E5%85%B3/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/UPMP/%E6%8A%80%E6%94%B9%E5%BA%93%E5%AD%98%E6%96%B0%E5%A2%9E%E7%9B%B8%E5%85%B3/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/archives/2023/10/">前一页</a><a class="page-number" href="/archives/2023/10/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2023/10/page/3/">3</a><a class="page-number" href="/archives/2023/10/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2023/10/page/6/">6</a><a class="extend next" rel="next" href="/archives/2023/10/page/3/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917965.js"></script>
+
+</body>
+</html>

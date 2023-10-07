@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2023/10/07/UPMP/%E8%A1%8C%E9%94%81%E9%97%AE%E9%A2%98/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span></span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2023-10-07T07:10:27.444Z">2023-10-07</time>
+    </p>
+    <div class="post-content">
+        <h1 id="行锁问题"><a href="#行锁问题" class="headerlink" title="行锁问题"></a>行锁问题</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>单行更新，在启动10个压测脚本，并行量为275时，出现行锁发生。</p>
+<h2 id="问题解决思路："><a href="#问题解决思路：" class="headerlink" title="问题解决思路："></a>问题解决思路：</h2><ol>
+<li><p>mysql处设置行锁释放时间</p>
+<p>mysql查询到可以设置行锁等待超时时间，超时时间到之后发出timeoutException.网上多是增加超时时间，避免出错。亦或是找到行锁线程，kill掉解决.</p>
+<p><code> show variables like &#39;innodb_lock_wait_timeout&#39;;</code> dbquery默认30s.</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/christopherchan/p/12390819.html">1.mysql超时分析</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.51testing.com/html/16/390216-838016.html">2.mysql超时分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/educast/article/details/78824028">3.Transactional超时时间控制与mysql事务超时时间：</a></p>
+</li>
+<li><p>spring事务与mysql事务处设置</p>
+<p>当前为当行语句行锁发生，不涉及，参考如上3</p>
+</li>
+<li><p>mysql单行超时设置</p>
+<p>单行超时释放连接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id&#x3D;&quot;getXXXX&quot; parameterType&#x3D;&quot;java.lang.String&quot; resultMap&#x3D;&quot;dataMap&quot; timeout&#x3D;&quot;1&quot;&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/shuimuz_j/article/details/9674427">Mybatis设置sql超时时间</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_28707365/article/details/113241314?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5.no_search_link">很全的分析=-==mybatis设置MySQL超时时间_怎样配置MySQL数据库超时设置？</a></p>
+<p>很全的分析 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43746959">https://zhuanlan.zhihu.com/p/43746959</a></p>
+</li>
+</ol>
+<h2 id="超时返回后是否Mysql仍在执行问题"><a href="#超时返回后是否Mysql仍在执行问题" class="headerlink" title="超时返回后是否Mysql仍在执行问题"></a>超时返回后是否Mysql仍在执行问题</h2><p>   为了验证上面问题，使用了Mysql的查询进程命令</p>
+<p>   <code> show full processlist ;</code></p>
+<p>   配合SQL  <code>select sleep(50)</code>  和 <code> kill  query  xx</code>  <code> kill xx</code></p>
+<p>   发现</p>
+<ol>
+<li><p>Mybatis查询超时时间设置 ：如上 timeout 或者 defaultStatementTimeout设置，是JDBC的查询超时设置  。</p>
+</li>
+<li><p>tcpSocketTimeout超时时间 是JDBC连接在ConnectionPropertiesImpl属性文件里的设置，参考 queryTimeoutKillsConnection  （查询超时断开连接）socketTimeout（超时断开tcp连接）。这两种配置均可在前台展示timeoutException，但是后台Mysql Server仍在执行sql。</p>
+</li>
+<li><p>连接池的queryTimeout超时时间 ，设置后发现无效。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">queryTimeout: 5</span><br><span class="line">killWhenSocketReadTimeout: true</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>url的connect连接上配置timeout和在dataSource（连接池上）配置效果一样</p>
+<blockquote>
+<p>jdbc 有2个超时时间, 一个是queryTimeout, 一个是socketTimeout,queryTimeout的作用是sql执行超时之后,可以取消这次的执行,底层原理是发送kill $id通知mysql来中断这个sql的执行</p>
+<p>socketTimeout的作用主要是为了解决tcp连接超时的问题, 超时之后,这个tcp连接会断开要注意的是,socket超时只是释放tcp链接, 但sql还是在mysql里面执行(可以通过show processlist来看到)所以为了取消sql的执行,socketTimeout的时间一定要大于queryTimeout才有意义</p>
+</blockquote>
+<ol start="4">
+<li><pre><code class="java">@Transactional(value = &quot;transactionManager&quot;, timeout=1)
+事务超时 同样简单</code></pre>
+</li>
+</ol>
+<p>参考了 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28308813">深入分析JDBC超时机制</a></p>
+<p><img src="https://pic2.zhimg.com/80/v2-308faf4a7cc1fa62c47df1e9966f8599_1440w.png" alt="img"></p>
+<p>现在我们要查test库中使用情况，我们可以到information_schema中查询<br>       解释：information_schema这张数据表保存了MySQL服务器所有数据库的信息。如数据库名，数据库的表，表栏的数据类型与访问权限等。再简单点，这台MySQL服务器上，到底有哪些数据库、各个数据库有哪些表，每张表的字段类型是什么，各个数据库要什么权限才能访问，等等信息都保存在information_schema表里面。</p>
+<p>我们可以用下面三张表来查原因：<br>       innodb_trx ## 当前运行的所有事务<br>       innodb_locks ## 当前出现的锁<br>       innodb_lock_waits ## 锁等待的对应关系</p>
+<p>此时我们在navcat中操作如下的指令，就会看到所有先执行事务的语句操作，</p>
+<p>然后我们找到状态 trx_state 被锁的状态，然后使用kill命令干掉它就可以</p>
+<p>– 查看 所有mysql 进程id<br>show full PROCESSLIST;</p>
+<p>– 查看mysql 事务处理列表<br>select * from information_schema.INNODB_TRX<br>————————————————<br>版权声明：本文为CSDN博主「不会推车的娘们」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/shmily_lsl/article/details/82696097">https://blog.csdn.net/shmily_lsl/article/details/82696097</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43746959">Spring各种超时</a></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/UPMP/">UPMP</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2023/10/07/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E4%BC%97%E9%82%AE%E4%BA%91%E6%89%93%E5%8D%B0%E4%BF%A1%E6%81%AF%E6%8E%A5%E5%8F%A3/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2023/10/07/UPMP/%E8%9E%8D%E5%90%88%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'UPMP/行锁问题' || '2023/10/07/UPMP/行锁问题/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917853.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 首页 -->
+
+    
+    <h3 class="widget-hd">
+        <strong>
+            
+                最近动态
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.049Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>** spring boot 在多环境情况下我们需要根据不同的获取不一样的值， 我们会配置在不同的文件中,<br>那么我们怎么获取配置的属性值呢！ 下面介绍几种用法。** </p>
+<ol>
+<li>除了默认配置在 application.properties 的多环境中添加属性：<br>我们会在application.properties 中激活不同方式选择下面的不同文件进行发布。<br>设置的激活参数：dev, test, prod<br>spring.profiles.active=prod<br>url.lm=editMessage<br>url.orgCode=100120171116031838<br>url.ybd=<a target="_blank" rel="noopener" href="http://www.test.com/sales/">http://www.test.com/sales/</a><br>url.PostUrl=/LmCpa/apply/applyInfo  </li>
+</ol>
+<p>获取属性可以, 定义配置类：</p>
+<p>@ConfigurationProperties(prefix = “url”)<br>public class  ManyEnvProperties{<br>   private String lm;<br>   private String orgCode;<br>   private String ybd;<br>   private String postUrl;<br>   // 省列getter setter 方法<br>}<br>2. 使用之前在spring 中加载的value值形式</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/SpringBoot%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/SpringBoot%E8%8E%B7%E5%8F%96%E5%B1%9E%E6%80%A7/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.015Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <pre><code> 1.spring bean的初始化执行顺序：构造方法---&gt; @PostConstruct注解的方法---&gt; afterPropertiesSet方法 ---&gt; init-method指定的方法。具体可以参考例子</code></pre>
+<ol start="2">
+<li><p>afterPropertiesSet通过接口实现方式调用进行赋值操作（效率上高一点），@PostConstruct和init-method都是通过反射机制调用。<br>————————————————<br>版权声明：本文为CSDN博主「奈文杰」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Hj95815/article/details/117779474">https://blog.csdn.net/Hj95815/article/details/117779474</a></p>
+</li>
+<li><p><strong>首先这些过程都在很重要的抽象类AbstractAutowireCapableBeanFactory抽象类中 这个类就是常用的DefaultListableBeanFactory的父类</strong></p>
+<p><strong>1.spring先根据beanDefinition创建出了bean 的实例</strong></p>
+</li>
+</ol>
+<p>   <strong>2.执行了populateBean方法 把属性和依赖都注入了</strong>  </p>
+<p>   <strong>3.执行了 initializeBean(beanName, exposedObject, mbd);方法 这里面才进行了Aware相关方法，afterPropertiesSet 和 initMethod 方法的调用</strong></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%20init-method%20postConstract/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%20init-method%20postConstract/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:27.001Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Spring AOP切面失败</p>
+<p>1.当前类调用类内方法</p>
+<p>引申：</p>
+<p>1）切面放在父类方法上，调用子类方法（子类方法内调用父类公共切面方法）–失效</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%20AOP%E5%88%87%E9%9D%A2%E5%A4%B1%E8%B4%A5/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring%20AOP%E5%88%87%E9%9D%A2%E5%A4%B1%E8%B4%A5/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.983Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>0.<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1768973190518061520&wfr=spider&for=pc">binlog介绍</a></p>
+<p>1.<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1741371045827915061&wfr=spider&for=pc">mysql主從同步介紹</a></p>
+<ul>
+<li><p>使用binlog文件进行主从同步（sqlDump）</p>
+</li>
+<li><p>主从同步方式：同步、异步、半同步（一台slave机器同步成功即认为成功，有幻读情况–主挂时刻）、半同步优化（解决幻读）</p>
+</li>
+</ul>
+<p>2.binLake,jd–&gt; Mysql（bin log发送mq通知）</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Mysql%20Binlog%E4%BB%8B%E7%BB%8D/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Mysql%20Binlog%E4%BB%8B%E7%BB%8D/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.975Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Mockito使用整理</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7036380453011456007">知乎总结mockito</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Wu_zx520/article/details/126313496">使用总结</a></p>
+<ol>
+<li>代码样式 –使用squaretest插件生成，然后调试</li>
+</ol>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Mockito%E4%BD%BF%E7%94%A8%E6%95%B4%E7%90%86/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Mockito%E4%BD%BF%E7%94%A8%E6%95%B4%E7%90%86/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/">
+    		f
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.968Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li><p>格式化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">logger.debug(&quot;Entry number: &#123;&#125; is &#123;&#125;&quot;, i, entry[i]);</span><br><span class="line">修改为：</span><br><span class="line">if(log.isDebugEnabled)&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>记录方法名，行号等信息</p>
+
+</li>
+</ol>
+<ul>
+<li>从同步文件记录-吞吐量-响应时长对比</li>
+</ul>
+<p>log4j2&gt; log4j1 &gt;logback</p>
+<p><a target="_blank" rel="noopener" href="https://logging.apache.org/log4j/2.x/performance.html">https://logging.apache.org/log4j/2.x/performance.html</a></p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Log4J/" title="f">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.961Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.获取当前时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LocalDate today &#x3D; LocalDate.now();</span><br><span class="line">System.out.println(&quot;今天：&quot; + today);</span><br></pre></td></tr></table></figure>
+
+<p>2.获取指定日期的时间</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">LocalDate appointDate = LocalDate.of(<span class="number">2019</span>, <span class="number">11</span>, <span class="number">1</span>);</span><br><span class="line">System.<span class="keyword">out</span>.println(<span class="string">&quot;2019年11月1日：&quot;</span> + appointDate);</span><br><span class="line">appointDate = LocalDate.of(<span class="number">2019</span>, Month.NOVEMBER, <span class="number">2</span>);</span><br><span class="line">System.<span class="keyword">out</span>.println(<span class="string">&quot;2019年11月2日：&quot;</span> + appointDate);</span><br></pre></td></tr></table></figure>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA8%20LocalDate/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA8%20LocalDate/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.949Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhou520yue520/article/details/81348926">@DateTimeFormat 和 @JsonFormat 注解</a></p>
+<p>==@DateFormat无效==</p>
+<p>一般都是使用@DateTimeFormat把<strong>传给后台的时间字符串转成Date</strong>，使用@JsonFormat<strong>把后台传出的Date转成时间字符串</strong>，但是@DateTimeFormat只会在类似@RequestParam的请求参数（url拼接的参数才生效，如果是放到RequestBody中的form-data也是无效的）上生效，如果@DateTimeFormat放到@RequestBody下是无效的。</p>
+<p>　　在@RequestBody中则可以使用@JsonFormat把传给后台的时间字符串转成Date，也就是说**@JsonFormat其实既可以把传给后台的时间字符串转成Date也可以把后台传出的Date转成时间字符串**。</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA%20%E8%AF%B7%E6%B1%82%E6%8E%A5%E6%94%B6Date%E7%B1%BB%E5%9E%8BOR%20%E8%BF%94%E5%9B%9EDate%E7%B1%BB%E5%9E%8B/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA%20%E8%AF%B7%E6%B1%82%E6%8E%A5%E6%94%B6Date%E7%B1%BB%E5%9E%8BOR%20%E8%BF%94%E5%9B%9EDate%E7%B1%BB%E5%9E%8B/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/">
+    		JAVA Mybatis 关联总结
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.933Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/JAVA/" title="JAVA">JAVA</a> / 
+    
+        <a href="/tags/Mybatis/" title="Mybatis">Mybatis</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>​    需求是三表关联，搞了三个实体类用activity_id做关联键，所以设计了一个实体类（包括基本类型活动号和三个表对应的三个实体类）。</p>
+<p>用到了resultMap中的associate和实体类映射。</p>
+<p><strong>association: 一对一关联(has one)</strong><br><strong>collection:一对多关联(has many)</strong></p>
+<p>一对一（associate）的三种使用方式</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/JAVA%20Mybatis%20%E5%85%B3%E8%81%94%E6%80%BB%E7%BB%93/" title="JAVA Mybatis 关联总结">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        
+        <!-- 文章标题 -->
+        
+    </header>
+    <p class="post-meta">
+        WestBrook 发表于
+        <time datetime="2023-10-07T06:55:26.899Z">2023-10-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>springboot 项目，引入外部sdk后，会自动将配置类扫描放入spring容器，并加载配置文件的配置。原因在于提供sdk的 spring.factories全路径：../src/main/resources/META-INF/spring.factories。</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Auto Configure</span></span><br><span class="line"><span class="meta">org.springframework.boot.autoconfigure.EnableAutoConfiguration</span>=<span class="string">\</span></span><br><span class="line"><span class="attr">com.jd.y.scc.sdk.mq.autoconfig.JmqClientAutoConfiguration</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangbeizhen18/article/details/129740389">使用spring.factories加载类和@EnableAutoConfiguration注解</a></p>
+<p>EnableAutoConfiguration注解的功能大概如下。</p>
+            
+            <p class="more">
+                <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/EnableAutoConfiguration%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ly1246621281.github.io/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/EnableAutoConfiguration%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9/" title="">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/page/4/">前一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">后一页</a>
+    </nav>
+    
+
+
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677918007.js"></script>
+
+</body>
+</html>

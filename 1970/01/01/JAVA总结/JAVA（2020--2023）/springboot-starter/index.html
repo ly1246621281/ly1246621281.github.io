@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>springboot starter | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/springboot-starter/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/springboot-starter/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/springboot-starter/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/springboot-starter/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>springboot starter</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="1970-01-01T05:37:00.803Z">1970-01-01</time>
+    </p>
+    <div class="post-content">
+        <h1 id="自定义Starter"><a href="#自定义Starter" class="headerlink" title="自定义Starter"></a>自定义Starter</h1><h2 id="实战自定义starter"><a href="#实战自定义starter" class="headerlink" title="实战自定义starter"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b5794bbd4b54?u_atoken=c955873d-977a-49c4-95b6-dd5c8fe584d2&u_asession=016W2NXtm9hDkb4V4OPWW2mDJTmVuFtk_BsdGMis6RwytwnmjQAGiRvjpcw9f3wdCJX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K8y-6S-evvcPY-rvjgpWMbFPMqDvQo0pEVbhSjSW3HVJmBkFo3NEHBv0PZUm6pbxQU&u_asig=05ReNMps794XZLa2116BvqUYBjSGurixtQAfqoGSMeocyIvpYk3MUFd6HvojHursjHEYBl-Sc5p-N3rai4th5Rb87fDgsg4lzzzLxbz37fL9KJYUH0UGtnJeS_-F75KEpKZT93KnFRSsi-UT-lFuvoX44V7wnwJK5aFUp0aLQg6A39JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzYfWdsfA9l6hNtc7tKB31jMpjFd6OTnJz6GCNoPSw6tWOF33MttdlYrQH7V14NMYIe3h9VXwMyh6PgyDIVSG1W_BOXPoTUeg3sBmzg2QZAtukJazJ-vHwBN39DhjYpKlM1rVYfg5X4Tr1Gnynru-A_BmA7f-t84zR_tn8bNJFNDumWspDxyAEEo4kbsryBKb9Q&u_aref=hw2DeVMd98nH9lFpliBVrnsiIdg=">实战自定义starter</a></h2><h3 id="1-starter"><a href="#1-starter" class="headerlink" title="1.starter"></a>1.starter</h3><blockquote>
+<p><strong>官方命名空间</strong></p>
+<ul>
+<li>前缀：spring-boot-starter-</li>
+<li>模式：spring-boot-starter-模块名</li>
+<li>举例：spring-boot-starter-web、spring-boot-starter-jdbc</li>
+</ul>
+<p><strong>自定义命名空间</strong></p>
+<ul>
+<li>后缀：-spring-boot-starter</li>
+<li>模式：模块-spring-boot-starter</li>
+<li>举例：mybatis-spring-boot-starter</li>
+</ul>
+</blockquote>
+<h3 id="2-autoconfiguer"><a href="#2-autoconfiguer" class="headerlink" title="2.autoconfiguer"></a>2.autoconfiguer</h3><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">启动器starter只是用来做依赖管理</span><br><span class="line">需要专门写一个类似spring-boot-autoconfigure的配置模块</span><br><span class="line">用的时候只需要引入启动器starter，就可以使用自动配置了</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>自动配置，解决了spring模块引入该maven之后还需要注入Spring容器，可直接使用@Autowired(需满足condition条件，或者配置文件-属性支持)</p>
+<p>@ConditionOnXX  @ConfigurationProperties(“”)</p>
+<p>注： starter只是引入该自动配置包，其实无任何作用。可直接引入autoconfigurtion包。</p>
+<p>重点在spring.factories和自定义配置类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Auto Configure</span><br><span class="line">org.springframework.boot.autoconfigure.EnableAutoConfiguration&#x3D;\</span><br><span class="line">com.example.hellospringbootstarterautoconfigurer.config.HelloServiceAutoConfiguration,\</span><br><span class="line">com.example.hellospringbootstarterautoconfigurer.config.NewServiceAutoConfiguration</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NewServiceAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean(name = &quot;autoConfigHelloTest&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> HelloService <span class="title">helloService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HelloService service = <span class="keyword">new</span> HelloService();</span><br><span class="line">        service.setName(<span class="string">&quot;ceshi&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> service;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h2><h3 id="1-spring-factories"><a href="#1-spring-factories" class="headerlink" title="1.spring.factories"></a>1.spring.factories</h3><p>Spring Boot中有一种非常<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%A7%A3%E8%80%A6&spm=1001.2101.3001.7020">解耦</a>的扩展机制：SpringFactories。这种扩展机制实际上是仿照Java中的SPI扩展机制来实现的。</p>
+<p>SPI 的全名为 Service Provider Interface.大多数开发人员可能不熟悉，因为这个是针对厂商或者插件的。在java.util.ServiceLoader的文档里有比较详细的介绍。</p>
+<p>简单的总结下 java SPI 机制的思想。我们系统里抽象的各个模块，往往有很多不同的实现方案，比如日志模块的方案，xml解析模块、jdbc模块的方案等。面向的对象的设计里，我们一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码。一旦代码里涉及具体的实现类，就违反了可拔插的原则，如果需要替换一种实现，就需要修改代码。为了实现在模块装配的时候能不在程序里动态指明，这就需要一种服务发现机制。</p>
+<p>java SPI 就是提供这样的一个机制：==为某个接口寻找服务实现的机制==。有点类似IOC的思想，就是将装配的控制权移到程序之外，在模块化设计中这个机制尤其重要。</p>
+<h3 id="spring的spi机制"><a href="#spring的spi机制" class="headerlink" title="spring的spi机制"></a>spring的spi机制</h3><p>在Spring中也有一种类似与Java SPI的加载机制。 它在<code>META-INF/spring.factories</code>文件中配置接口的实现类名称，然后在程序中读取这些配置文件并实例化。 这种自定义的SPI机制是Spring Boot Starter实现的基础。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzUvMTZjNjA4MjIyN2RmNDlmNA?x-oss-process=image/format,png" alt="img"></p>
+<p>在日常工作中，我们可能需要实现一些SDK或者Spring Boot Starter给被人使用时， 我们就可以使用Factories机制。Factories机制可以让SDK或者Starter的使用只需要很少或者不需要进行配置，只需要在服务中引入我们的jar包即可。</p>
+<h3 id="2-springboot-2-7版本"><a href="#2-springboot-2-7版本" class="headerlink" title="2.springboot 2.7版本"></a>2.springboot 2.7版本</h3><p>果你是Spring Boot用户的话，一定有这样的开发体验，当我们要引入某个功能的时候，只需要在maven或gradle的配置中直接引入对应的Starter，马上就可以使用了，而不需要像传统Spring应用那样写个xml或java配置类来初始化各种Bean。</p>
+<p>如果你有探索过这些Starter的原理，那你一定知道Spring Boot并没有消灭这些原本你要配置的Bean，而是将这些Bean做成了一些默认的配置类，同时利用/META-INF/spring.factories这个文件来指定要加载的默认配置。</p>
+<p>这样当Spring Boot应用启动的时候，就会根据引入的各种Starter中的/META-INF/spring.factories文件所指定的配置类去加载Bean。</p>
+<p>而这次刚发布的Spring Boot 2.7中，有一个不推荐使用的内容就是关于这个/META-INF/spring.factories文件的，所以对于有自定义Starter的开发者来说，有时间要抓紧把这一变化改起来了，因为在Spring Boot 3开始将移除对/META-INF/spring.factories的支持。</p>
+<p>那么具体怎么改呢？下面以之前我们编写的一个swagger的starter为例，它的/META-INF/spring.factories内容是这样的：</p>
+<p>org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.spring4all.swagger.SwaggerAutoConfiguration</p>
+<p>我们只需要创建一个新的文件：/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports，内容的话只需要直接放配置类就可以了，比如这样：</p>
+<p>com.spring4all.swagger.SwaggerAutoConfiguration<br>注意：这里多了一级spring目录。<br>————————————————<br>版权声明：本文为CSDN博主「程序猿DD」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/dyc87112/article/details/124969130">https://blog.csdn.net/dyc87112/article/details/124969130</a></p>
+<p><strong>新版本如何做到新老注册方式同时兼容？</strong><br>SpringFactoriesLoader用来加载spring.factories配置类<br>ImportCandidates用来加载META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports配置文件；<br>看下其中一种场景AutoConfigurationExcludeFilter类兼容两种方案的源码：</p>
+<pre><code>protected List&lt;String&gt; getAutoConfigurations() &#123;
+    if (this.autoConfigurations == null) &#123;
+        List&lt;String&gt; autoConfigurations = new ArrayList&lt;&gt;(
+                SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class, this.beanClassLoader));
+        ImportCandidates.load(AutoConfiguration.class, this.beanClassLoader).forEach(autoConfigurations::add);
+        this.autoConfigurations = autoConfigurations;
+    &#125;
+    return this.autoConfigurations;
+&#125;</code></pre>
+<h3 id="解决-Spring-Boot-中不能被默认路径扫描的配置类的方式，有-2-种："><a href="#解决-Spring-Boot-中不能被默认路径扫描的配置类的方式，有-2-种：" class="headerlink" title="解决 Spring Boot 中不能被默认路径扫描的配置类的方式，有 2 种："></a>解决 Spring Boot 中不能被默认路径扫描的配置类的方式，有 2 种：</h3><blockquote>
+<p>（1）在 Spring Boot 主类上使用 @Import 注解<br>（2）使用 spring.factories 文件</p>
+</blockquote>
+<p>spring-core 包里定义了 SpringFactoriesLoader 类，这个类实现了检索 META-INF/spring.factories 文件，并获取指定接口的配置的功能。在这个类中定义了两个对外的方法：</p>
+<p>loadFactories 根据接口类获取其实现类的实例，这个方法返回的是对象列表。<br>loadFactoryNames 根据接口获取其接口类的名称，这个方法返回的是类名的列表。</p>
+<p>，在这个方法中会遍历整个 spring-boot 项目的 classpath 下 ClassLoader 中所有 jar 包下的 spring.factories文件。也就是说我们可以在自己的 jar 中配置 spring.factories 文件，不会影响到其它地方的配置，也不会被别人的配置覆盖。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Enumeration&lt;URL&gt; urls = classLoader.getResources(FACTORIES_RESOURCE_LOCATION);</span><br><span class="line"><span class="keyword">while</span> (urls.hasMoreElements()) &#123;</span><br><span class="line">   URL url = urls.nextElement();</span><br><span class="line">   UrlResource resource = <span class="keyword">new</span> UrlResource(url);</span><br><span class="line">会加载类路径下的所有spring.factories</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>|<a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2020/12/02/UPMP/%E8%AF%95%E7%94%A8%E5%93%81%E4%B8%93%E4%BB%93%E6%A8%A1%E5%BC%8F%E6%8A%80%E6%9C%AF%E8%AF%84%E5%AE%A1/">
+            
+                试用品专仓模式技术评审
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/1970/01/01/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Comparator%E5%AD%A6%E4%B9%A0/">
+            
+                Comparator学习
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JAVA总结/JAVA（2020--2023）/springboot-starter' || '1970/01/01/JAVA总结/JAVA（2020--2023）/springboot-starter/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917936.js"></script>
+
+</body>
+</html>

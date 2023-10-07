@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
+    
+    <title>EnableConfigurationProperties 注解 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
+    <meta name="keywords" content="ZK, 前端, Web, 张德龙, 前端开发" >
+    <meta name="description" content="ZK个人小站" >
+
+    
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico" >
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!--[if lt IE 9]>
+    
+<script src="/js/html5.js"></script>
+
+    <![endif]-->
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d5ebf515ab530cfbdda5f5c85093fb41";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a target="_blank" rel="noopener" href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">Hexo</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/@EnableConfigurationProperties%20%E6%B3%A8%E8%A7%A3/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/@EnableConfigurationProperties%20%E6%B3%A8%E8%A7%A3/index.html" class="item ">
+                <a href="/lab/" title="XX" class="icon-lab">&nbsp;XX</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/@EnableConfigurationProperties%20%E6%B3%A8%E8%A7%A3/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/@EnableConfigurationProperties%20%E6%B3%A8%E8%A7%A3/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/ly1246621281" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon" >
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>EnableConfigurationProperties 注解</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2023-10-07T06:55:26.396Z">2023-10-07</time>
+    </p>
+    <div class="post-content">
+        <p>Spring注解–@enableConfigurationProperties</p>
+<a id="more"></a>
+
+<h2 id="1-EnableConfigurationProperties-作用"><a href="#1-EnableConfigurationProperties-作用" class="headerlink" title="1.@EnableConfigurationProperties 作用"></a>1.@EnableConfigurationProperties 作用</h2><p>作用是为了激活@ConfigurationProperties 。作用同在配置类上@Component。</p>
+<p>当<code>@EnableConfigurationProperties</code>注解应用到你的<code>@Configuration</code>时， 任何被<code>@ConfigurationProperties</code>注解的beans将自动被Environment属性配置。 这种风格的配置特别适合与SpringApplication的外部YAML配置进行配合使用</p>
+<h2 id="2-ConfigurationProperties-作用"><a href="#2-ConfigurationProperties-作用" class="headerlink" title="2.@ConfigurationProperties 作用"></a>2.@ConfigurationProperties 作用</h2><p>@ConfigurationProperties 是使配置文件变成Bean对象，作用同@Value。</p>
+<p>注解可以放置在类和方法上。</p>
+<blockquote>
+<p>当将该注解作用于方法上时，如果想要有效的绑定配置，那么该方法需要有@Bean注解且所属Class需要有@Configuration注解。</p>
+<p><strong>简单一句话概括就是：Sring的有效运行是通过上下文（Bean容器）中Bean的配合完成的，Bean可以简单理解成对象，有些对象需要指定字段内容，那么这些内容我们可以通过配置文件进行绑定，然后将此Bean归还给容器</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DruidDataSourceConfig</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * DataSource 配置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ConfigurationProperties(prefix = &quot;spring.datasource.druid.read&quot;)</span></span><br><span class="line">    <span class="meta">@Bean(name = &quot;readDruidDataSource&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">readDruidDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> DruidDataSource();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * DataSource 配置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ConfigurationProperties(prefix = &quot;spring.datasource.druid.write&quot;)</span></span><br><span class="line">    <span class="meta">@Bean(name = &quot;writeDruidDataSource&quot;)</span></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">writeDruidDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> DruidDataSource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>作用于类上时：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DatasourcePro</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String url;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 配置文件中是driver-class-name, 转驼峰命名便可以绑定成</span></span><br><span class="line">    <span class="keyword">private</span> String driverClassName;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String type;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li>@ConfigurationProperties 和 @value 有着相同的功能,但是 @ConfigurationProperties的写法更为方便</li>
+<li>@ConfigurationProperties 的 POJO类的命名比较严格,因为它必须和prefix的后缀名要一致, 不然值会绑定不上, 特殊的后缀名是“driver-class-name”这种带横杠的情况,在POJO里面的命名规则是 <strong>下划线转驼峰</strong> 就可以绑定成功，所以就是 “driverClassName”</li>
+</ol>
+<h2 id="3-ConditionalOnMissingBean注解"><a href="#3-ConditionalOnMissingBean注解" class="headerlink" title="3.@ConditionalOnMissingBean注解"></a>3.@ConditionalOnMissingBean注解</h2><ul>
+<li><p>@ConditionalOnBean // 当给定的在bean存在时,则实例化当前Bean</p>
+</li>
+<li><p>@ConditionalOnMissingBean // 当给定的在bean不存在时,则实例化当前Bean</p>
+</li>
+<li><p>@ConditionalOnClass // 当给定的类名在类路径上存在，则实例化当前Bean</p>
+</li>
+<li><p>@ConditionalOnMissingClass // 当给定的类名在类路径上不存在，则实例化当前Bean</p>
+</li>
+<li><p>@ConditionalOnExpression(“‘${mock.user.pin:null}’ == ‘null’ || ‘${mock.user.pin}’ == ‘’”)</p>
+</li>
+<li><p><strong>@ConditionalOnProperty</strong></p>
+<p>通过其三个属性prefix,name以及havingValue来实现的，其中prefix表示配置文件里节点前缀，name用来从application.properties中读取某个属性值，havingValue表示目标值。</p>
+<ul>
+<li>如果该值为空，则返回false;</li>
+<li>如果值不为空，则将该值与havingValue指定的值进行比较，如果一样则返回true;否则返回false。</li>
+<li>返回值为false，则该configuration不生效；为true则生效。</li>
+</ul>
+<p>下面代码演示为配置文件lind.redis.enable为true时才会注册RedisFactory这个bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ConditionalOnProperty(prefix=&quot;lind.redis&quot;,name = &quot;enable&quot;, havingValue = &quot;true&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisConfig</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Bean</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> RedisMap <span class="title">redisMap</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> RedisMapImpl();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.jb51.net/article/193224.htm">springboot @ConditionalOnMissingBean注解的作用详解</a></p>
+<h2 id="4-PropertySource注解加载指定的属性文件"><a href="#4-PropertySource注解加载指定的属性文件" class="headerlink" title="4. @PropertySource注解加载指定的属性文件"></a>4. @<strong>PropertySource</strong>注解加载指定的属性文件</h2><p>解析properities或者file文件。与ConfigurationProperties或者@value配合使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties</span>是类级别的注解，具体使用方式如下：</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;spring.datasource.shareniu&quot;)</span>  </span><br><span class="line"><span class="meta">@PropertySource( name=&quot;jdbc-bainuo-dev.properties&quot;,value= &#123;&quot;classpath:config/jdbc-bainuo-dev.properties&quot;&#125;,ignoreResourceNotFound=false,encoding=&quot;UTF-8&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerDataSourceConfig1</span>  </span>&#123;</span><br><span class="line">    <span class="keyword">private</span>  String url;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是PropertySourceFactory的加载时机早于Spring Beans容器，因此实现上不能依赖于Spring的IOC。</p>
+<p>PropertySourceFactory要求实现类返回PropertySource。PropertySource是Spring属性（或者说配置）功能的核心接口，有很多实现，比如：</p>
+<ol>
+<li><p>ResourcePropertySource 从Resource加载PropertySource</p>
+</li>
+<li><p>PropertiesPropertySource 从properties文件加载PropertySource</p>
+</li>
+<li><p>SystemEnvironmentPropertySource 从系统环境变量加载PropertySource</p>
+</li>
+<li><p>MapPropertySource 包装一个Map为PropertySource（Adapter模块）</p>
+</li>
+<li><p>CompositePropertySource 支持将若干PropertySource进行组合（Composite模式）</p>
+<p><img src="https://raw.githubusercontent.com/ly1246621281/PicGo/main/img/image-20210921202836880.png" alt="image-20210921202836880"></p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.jb51.net/article/141981.htm">Spring Boot自定义配置属性源（PropertySource）</a></p>
+<h2 id="5-Spring-多线程"><a href="#5-Spring-多线程" class="headerlink" title="5.Spring 多线程"></a>5.Spring 多线程</h2><p>推荐分业务创建专享线程池。</p>
+<p>自定义线程池</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableAsync</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExecutorConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Set the ThreadPoolExecutor&#x27;s core pool size. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> corePoolSize = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">/** Set the ThreadPoolExecutor&#x27;s maximum pool size. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> maxPoolSize = <span class="number">200</span>;</span><br><span class="line">    <span class="comment">/** Set the capacity for the ThreadPoolExecutor&#x27;s BlockingQueue. */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> queueCapacity = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TaskExecutorBuilder <span class="title">taskExecutorBuilder</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Executor <span class="title">mySimpleAsync</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ThreadPoolTaskExecutor executor = <span class="keyword">new</span> ThreadPoolTaskExecutor();</span><br><span class="line">        executor.setCorePoolSize(corePoolSize);</span><br><span class="line">        executor.setMaxPoolSize(maxPoolSize);</span><br><span class="line">        executor.setQueueCapacity(queueCapacity);</span><br><span class="line">        executor.setThreadNamePrefix(<span class="string">&quot;MySimpleExecutor-&quot;</span>);</span><br><span class="line">        executor.initialize();</span><br><span class="line">        <span class="keyword">return</span> executor;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Executor <span class="title">myAsync</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ThreadPoolTaskExecutor executor = <span class="keyword">new</span> ThreadPoolTaskExecutor();</span><br><span class="line">        executor.setCorePoolSize(corePoolSize+<span class="number">20</span>);</span><br><span class="line">        executor.setMaxPoolSize(maxPoolSize);</span><br><span class="line">        executor.setQueueCapacity(queueCapacity);</span><br><span class="line">        executor.setThreadNamePrefix(<span class="string">&quot;MyExecutor-&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// rejection-policy：当pool已经达到max size的时候，如何处理新任务</span></span><br><span class="line">        <span class="comment">// CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行</span></span><br><span class="line">        executor.setRejectedExecutionHandler(<span class="keyword">new</span> ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line">        executor.initialize();</span><br><span class="line">        <span class="keyword">return</span> executor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>指定自定义线程池进行逻辑处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTask</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async(&quot;mySimpleAsync&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Future&lt;String&gt; <span class="title">doTask1</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException</span>&#123;</span><br><span class="line">        log.info(<span class="string">&quot;Task1 started.&quot;</span>);</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">&quot;Task1 finished, time elapsed: &#123;&#125; ms.&quot;</span>, end-start);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> AsyncResult&lt;&gt;(<span class="string">&quot;Task1 accomplished!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async(&quot;myAsync&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Future&lt;String&gt; <span class="title">doTask2</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException</span>&#123;</span><br><span class="line">        log.info(<span class="string">&quot;Task2 started.&quot;</span>);</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">&quot;Task2 finished, time elapsed: &#123;&#125; ms.&quot;</span>, end-start);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> AsyncResult&lt;&gt;(<span class="string">&quot;Task2 accomplished!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>springboot TaskExecutionAutoConfiguration中taskExecutorBuilder和 applicationTaskExecutor决定是否要使用默认线程池</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Lazy</span></span><br><span class="line">  <span class="meta">@Bean(</span></span><br><span class="line"><span class="meta">      name = &#123;&quot;applicationTaskExecutor&quot;, &quot;taskExecutor&quot;&#125;</span></span><br><span class="line"><span class="meta">  )</span></span><br><span class="line">  <span class="meta">@ConditionalOnMissingBean(&#123;Executor.class&#125;)</span> <span class="comment">//没有executor bean的时候使用默认的线程池</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> ThreadPoolTaskExecutor <span class="title">applicationTaskExecutor</span><span class="params">(TaskExecutorBuilder builder)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> builder.build();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>TaskExecutionProperties是线程池的默认配置项，队列数为无限可能导致内存溢出。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> queueCapacity = <span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> coreSize = <span class="number">8</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> maxSize = <span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span> allowCoreThreadTimeout = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">private</span> Duration keepAlive = Duration.ofSeconds(<span class="number">60L</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="新提交一个任务时的处理流程："><a href="#新提交一个任务时的处理流程：" class="headerlink" title="新提交一个任务时的处理流程："></a>新提交一个任务时的处理流程：</h3><p>1、如果线程池的当前大小还没有达到基本大小(poolSize &lt; corePoolSize)，那么就新增加一个线程处理新提交的任务；</p>
+<p>2、如果当前大小已经达到了基本大小，就将新提交的任务提交到阻塞队列排队，等候处理workQueue.offer(command)；</p>
+<p>3、如果队列容量已达上限，并且当前大小poolSize没有达到maximumPoolSize，那么就新增线程来处理任务；</p>
+<p>4、如果队列已满，并且当前线程数目也已经达到上限，那么意味着线程池的处理能力已经达到了极限，此时需要拒绝新增加的任务。至于如何拒绝处理新增的任务，取决于线程池的饱和策略RejectedExecutionHandler。  </p>
+<p>接下来我们看下allowCoreThreadTimeOut和keepAliveTime属性的含义。在压力很大的情况下，线程池中的所有线程都在处理新提交的任务或者是在排队的任务，这个时候线程池处在忙碌状态。如果压力很小，那么可能很多线程池都处在空闲状态，这个时候为了节省系统资源，回收这些没有用的空闲线程，就必须提供一些超时机制，这也是线程池大小调节策略的一部分。通过corePoolSize和maximumPoolSize，控制如何新增线程；通过allowCoreThreadTimeOut和keepAliveTime，控制如何销毁线程。</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/aitangyong/article/details/38822505">ThreadPoolExecutor源码(一)线程池的corePoolSize、maximumPoolSize和poolSize</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hsug/p/13303018.html">使用样例</a></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>|<a class="cat-link" href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/JAVA/" title="JAVA">JAVA</a> / 
+    
+        <a href="/tags/Spring/" title="Spring">Spring</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="/2023/10/07/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/CAL-%E9%93%BE%E8%A1%A8%E6%95%B4%E7%90%86/">
+            
+                无标题
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/2020/12/29/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020--2023%EF%BC%89/Spring-%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/">
+            
+                Spring 参数校验
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  
+<script src="/js/comment.js"></script>
+
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'JAVA总结/JAVA（2020--2023）/@EnableConfigurationProperties 注解' || '2023/10/07/JAVA总结/JAVA（2020--2023）/@EnableConfigurationProperties 注解/',
+    owner: 'ly1246621281',
+    repo: 'blog_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章搜索</strong></h3>
+        <div class="search-form">
+  <form
+    id="searchForm"
+    method="GET"
+    action="https://www.baidu.com/s"
+    ectype="application/x-www-form-urlencoded"
+    target="_blank"
+    autocomplete="false"
+    onsubmit="javascript: return false;">
+    <input
+      id="searchKeyword"
+      type="text"
+      class="form-control"
+      placeholder="输入关键字搜索"
+      autocomplete="false"
+    />
+    <input id="searchKeywordHidden" type="hidden" name="wd" />
+    <input id="searchButton" class="btn" type="submit" value="搜索" />
+  </form>
+</div>
+    </section>
+    
+
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Others/">Others</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Mysql/">Mysql</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/">UPMP</a>
+        <span class="badge">(27)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/">JAVA总结</a>
+        <span class="badge">(32)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA%EF%BC%882020-2023%EF%BC%89/">JAVA（2020--2023）</a>
+        <span class="badge">(29)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/JAVA%E6%80%BB%E7%BB%93/JAVA-2020/">JAVA (--2020)</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/UPMP/%E8%BF%90%E8%90%A5%E7%9C%8B%E6%9D%BF/">运营看板</a>
+        <span class="badge">(2)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/titleTag-tags2/" title="titleTag,tags2">titleTag,tags2 (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (2)</a>
+  
+    <a class="tag-item" href="/tags/website/" title="website">website (2)</a>
+  
+    <a class="tag-item" href="/tags/%E5%89%8D%E7%AB%AF/" title="前端">前端 (2)</a>
+  
+    <a class="tag-item" href="/tags/%E8%AF%84%E5%AE%A1-%E4%B8%93%E4%BB%93/" title="评审,专仓">评审,专仓 (1)</a>
+  
+    <a class="tag-item" href="/tags/JAVA/" title="JAVA">JAVA (6)</a>
+  
+    <a class="tag-item" href="/tags/Mybatis/" title="Mybatis">Mybatis (1)</a>
+  
+    <a class="tag-item" href="/tags/Spring/" title="Spring">Spring (2)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://github.com/front-end-pigs/blog" target="_blank" title="Github博客">Github博客</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2023
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+
+<script src="/js/main.js?v=1696677917922.js"></script>
+
+</body>
+</html>
